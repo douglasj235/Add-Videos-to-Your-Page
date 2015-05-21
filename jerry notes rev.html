@@ -495,109 +495,259 @@
       <a id="concept9"></a> 
             <h2>Stage 3 Concept 1: Class and Objects </h2>
     <div class="concept"> 
-        <div class="concept-title"><h3>Modules and Importing</h3></div>
-        <div class="concept-description"> 
-                <p>
-                  A module is a file consisting of Python code. A module can define functions, classes and variables. A module can also include runnable code. Modules allows you to logically organize your Python code. Grouping related code into a module makes the code easier to understand and use. 
-                <p>
-                  Python code in one module gains access to the code in another module by the process of importing it.  You enter import then the module name in your file you want to import the module. Modules that were imported in some of the exercises include: turtle, webbrowser, OS and time. 
-                </p>
-        </div> 
-              
-    </div> 
-    <div class="concept"> 
-        <div class="concept-title"><h3>Library</h3></div>
-        <div class="concept-description"> 
-                <p>
-                Python has a standard library for computer programmers to use as a manual to look up programming language specifications.  This library is very extensive and covers a wide range of programming topics.  You can google search Python Standard Library to access.
-                </p>
-        </div> 
-              
-    </div><div class="concept"> 
-        <div class="concept-title"><h3>What is abstraction?</h3></div>
-        <div class="concept-description"> 
-                <p>
-                Abstracting something means to give names to things, so that the name captures the core of what a function or a whole program does. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level.  The abstract thinker can conceptualize or generalize, understanding that each concept can have multiple meanings. Such thinkers might see patterns beyond the obvious and be able to use patterns or a variety of concrete ideas or clues to solve larger problems.
-                </p>
-                <p>
-                  I was able to write a Python program (Take a Break) importing from the Python Standard Library the modules webbrowser and time which opened a youtube video alerting me to take a break.  The details of how to open a webbrower using the function def open and pausing program flow using the function def sleep were hidden from us.  The hiding of detail in programming is called abstraction.  Abstraction allowed me to focus on the program that I had to write.
-                </p>
-        </div> 
-              
-    </div> 
-    <div class="concept"> 
         <div class="concept-title"><h3>Object Oriented Programming</h3></div>
         <div class="concept-description"> 
                 <p>
-                OOP is a type of programming in which programmers define not only the data type of a data structure, but also the types of operations (functions) that can be applied to the data structure.  In this way, the data structure becomes an object that includes both data and functions. Python is called an "object oriented programming language."  There is a construct in Python called a class that lets you sturcture your software in a particular way.  Using classes, you can add consistency to you programs so that they can be used in a cleaner way. In addition, programmers can create relationships between one object and another. For example, objects can inherit characteristics from other objects.
-                </p>
+                  <span class="code">Object oriented programming</span> uses interacting objects to model and solve complex programming tasks.  Since the design is modular, part of the system can be updated without a need to make large-scale changes.  OOP promotes greater flexibility and maintainability in programming, and is widely popular in large-scale software engineering. Because OOP strongly emphasizes modularity, object-oriented code is simpler to develop and easier to understand later on. Object-oriented code promotes more direct analysis, coding, and understanding of complex situations and procedures than less modular programming methods.
                 <p>
-                  I was able to write a Python program (Turtle mini project) importing from the Python Standard Library the module turtle to draw my initials.  The class Turtle is called which calls the __init__ function which created space and memory to draw my object jerry = turtle.Turtle().  
+                  I was able to write a Python program (Turtle mini project) importing from the Python Standard Library the module turtle to draw my initials.  The class Turtle is called which calls the <span class="code"> __init__ </span> function which created space and memory to draw my object jerry = turtle.Turtle(). 
                 </p>
         </div> 
               
     </div> 
     <div class="concept"> 
+        <div class="concept-title"><h3>Object</h3></div>
+        <div class="concept-description"> 
+                <p>
+                Object is a unique instance of a data structure that's defined by its class. An object comprises both data members (class variables and instance variables) and methods. <span class="code">Class objects</span> support two kinds of operations: attribute references and instantiation.
+                </p>
+                <p>
+                <span class="code">Attribute references</span> use the standard syntax used for all attribute references in Python: obj.name. Valid attribute names are all the names that were in the class&rsquo;s namespace when the class object was created. So, if the class definition looked like this:  
+                </p>
+                    <div class="code-block">
+                    <p>class MyClass:<br> 
+                      <span class="indent">"""A simple example class"""</span> <br> 
+                      <span class="indent">i = 12345</span> <br>
+                      <span class="indent">def f(self):</span> <br>
+                      <span class="indent2">return 'hello world'</span>
+                     </p>
+                     </div> 
+                <p>
+                then <span class="code">MyClass.i</span> and <span class="code">MyClass.f</span> are valid attribute references, returning an integer and a function object. Class attributes can also be assigned, so you can change the value of MyClass.i by assignment.  <span class="code">__doc__</span> is also a valid attribute, returning the docstring belonging to the class: "A simple example class".
+                </p>
+                <p>
+                Class instantiation uses function notation.  Just pretend that the class object is a parameterless function that returns a new instance of the class. For example (assuming the above class):
+                </p>
+                     <div class="code-block">
+                    <p>x = MyClass() 
+                      
+                     </p>
+                     </div> 
+                <p>
+                creates a new instance of the class and assigns this object to the local variable x.
+                </p>
+                <p>
+                The instantiation operation (&lsquo;&lsquo;calling&rsquo;&rsquo; a class object) creates an empty object. Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named __init__(), like this:
+                </p>
+                    <div class="code-block">
+                    <p>def __init__(self):<br> 
+                      <span class="indent">self.data = []</span> <br> 
+                    </p>
+                     </div>
+
+
+        </div> 
+              
+    </div>
+     <div class="concept"> 
         <div class="concept-title"><h3>Class</h3></div>
         <div class="concept-description"> 
                 <p>
-                  A defined template where all the data falls to make copies without having to create multiple files.  In the module turtle there is a class called Turtle.  A class is a neatly packaged box that puts things together really well and allows us to write code like turtle.Turtle().  When we run this code we are calling a function called __init__ which is defined inside the class Turtle.  Init stands for initialize and what it does is create space in memory for a new instance or object of the class Turtle (ex brad = turtle.Turtle()).  brad is the instance or object. brad can access all the methods in the class Turtle like def forward and def right.  The () after Turtle call the __init__ function inside the Turtle class.  The function __init__ is also called a constructor because it constructs space and memory for the new instance or object.  Self is the object or instance being created ( def __init__(self):.  
+                A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
                 </p>
                 <p>
-                 You can think of a Class as the blueprint of the building (ex. Height, # of rooms).  This blueprint can be used to build multiple different buildings (ex. Office with yellow walls or a residential complex with blue walls).  The instance or object are examples of the class or blueprint. 
+                The class statement creates a new class definition. The name of the class immediately follows the keyword class followed by a colon as follows: 
+                </p>
+                    <div class="code-block">
+                    <p>class ClassName:<br> 
+                      <span class="indent">'Optional class documentation string'</span> <br> 
+                      <span class="indent">class_suite</span> <br>
+                    </p>
+                     </div> 
+                <p>
+                The class has a documentation string, which can be accessed via ClassName.__doc__.
+                </p>
+                <p>
+                The class_suite consists of all the component statements defining class members, data attributes and functions. <br>
+                <br>
+                Example<br>
+                Following is the example of a simple Python class &mdash;
+                </p>
+                     <div class="code-block">
+                    <p>class Employee:<br> 
+                      <span class="indent">'Common base class for all employees'</span> <br> 
+                      <span class="indent">empCount = 0</span> <br>
+                      <br>
+                      <span class="indent">def __init__(self, name, salary):</span> <br>
+                      <span class="indent2">self.name = name</span> <br>
+                      <span class="indent2">self.salary = salary</span> <br>
+                      <span class="indent2">Employee.empCount += 1</span> <br>
+                      <br>
+                      <span class="indent">def displayCount(self):</span> <br>
+                      <span class="indent2">print "Total Employee %d" % Employee.empCount</span> <br>
+                      <span class="indent">def displayEmployee(self):</span> <br>
+                      <span class="indent2">print "Name : ", self.name,  ", Salary: ", self.salary</span>
+                      </p>
+                     </div> 
+                <p>
+                The variable empCount is a class variable whose value is shared among all instances of a this class. This can be accessed as Employee.empCount from inside the class or outside the class.
+                </p>
+                <p>
+                The first method <span class="code">__init__()</span> is a special method, which is called class constructor or initialization method that Python calls when you create a new instance of this class.
+                </p>
+                <p>
+                    You declare other class methods like normal functions with the exception that the first argument to each method is self. Python adds the self argument to the list for you; you do not need to include it when you call the methods. 
+                </p>
+                <p>
+                <span class="code">Class variable</span> is a variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class's methods.  Examples of classes that have pre-defined variables include:  <span class="code">__name__, __doc__ and __module__</span>.  Class variables are not used as frequently as instance variables are.
                 </p>  
+
+
+        </div> 
+              
+    </div>
+     <div class="concept"> 
+        <div class="concept-title"><h3>Instance:</h3></div>
+        <div class="concept-description"> 
+                <p>
+                <span class="code">Instance</span> is an individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.
+                </p>
+                <p>
+                In object-oriented programming with classes, an <span class="code">instance variable</span> is a variable defined in a class (i.e. a member variable), for which each instantiated object of the class has a separate copy, or instance. Instance variable is a variable that is defined inside a method and belongs only to the current instance of a class. Instance variables are for data unique to each instance.  
+                </p>
         </div> 
               
     </div> 
     <div class="concept"> 
-        <div class="concept-title"><h3>Python from statement</h3></div>
+        <div class="concept-title"><h3>Method</h3></div>
         <div class="concept-description"> 
                 <p>
-                This statement lets you import specific attributes from a module into the current  namespace (ex from modname import name1 or from twilio.rest import TwilioRestClient). From the twilio.rest module import the information from the TwilioRestClient class.
+                A <span class="code">method</span> is a function that &lsquo;&lsquo;belongs to&rsquo;&rsquo; an object.
+                </p>
+                      <div class="code-block">
+                    <p>class MyClass:<br> 
+                      <span class="indent">"""A simple example class"""</span> <br> 
+                      <span class="indent">i = 12345</span> <br>
+                      <span class="indent">def f(self):</span> <br>
+                      <span class="indent2">return 'hello world'</span>
+                     </p>
+                     </div> 
+                <p>
+                 Valid method names of an instance object depend on its class. By definition, all attributes of a class that are function objects define corresponding methods of its instances. So in our example, x.f is a valid method reference, since MyClass.f is a function, but x.i is not, since MyClass.i is not. But x.f is not the same thing as MyClass.f &mdash; it is a method object, not a function object.
+                </p>
+                <p>
+                Usually, a method is called right after it is bound:
+                </p>  
+                      <div class="code-block">
+                    <p>x.f() 
+                      
+                     </p>
+                     </div> 
+                <p>
+                  In the MyClass example, this will return the string 'hello world'. However, it is not necessary to call a method right away: x.f is a method object, and can be stored away and called at a later time. For example:
+                </p>    
+                       <div class="code-block">
+                    <p>xf = x.f<br> 
+                      while True:<br>
+                      <span class="indent">print xf()</span> <br> 
+                    </p>
+                     </div>  
+                <p>
+                will continue to print hello world until the end of time.
+                </p>
+                <p>
+                The call x.f() is exactly equivalent to MyClass.f(x). In general, calling a method with a list of n arguments is equivalent to calling the corresponding function with an argument list that is created by inserting the method&rsquo;s object before the first argument.
+                </p>  
+
+        </div> 
+              
+    </div> 
+    <div class="concept"> 
+        <div class="concept-title"><h3>Inheritance:</h3></div>
+        <div class="concept-description"> 
+                <p>
+                <span class="code">Inheritance</span> is the transfer of the characteristics of a class to other classes that are derived from it.
+                </p>
+                <p>
+                  Instead of starting from scratch, you can create a class by deriving it from a preexisting class by listing the parent class in parentheses after the new class name.  
+                </p>
+                <p>
+                The child class inherits the attributes of its parent class, and you can use those attributes as if they were defined in the child class. A child class can also override data members and methods from the parent. When a method created in a sub class overrides a method created in its parent class is called <span class="code">method overriding</span>.
+                </p>  
+                      <div class="code-block">
+                    <p>class SubClassName (ParentClass1[, ParentClass2, ...]):<br> 
+                       <span class="indent">'Optional class documentation string'</span> <br>
+                      <span class="indent">class_suite</span> 
+                    </p>
+                     </div>
+
+
+        </div> 
+              
+    </div> 
+    <div class="concept"> 
+        <div class="concept-title"><h3>Module</h3></div>
+        <div class="concept-description"> 
+                <p>
+                  A <span class="code">module</span> is a file containing Python definitions and statements. Definitions from a module can be imported into other modules or into the main module. The file name is the module name with the suffix .py appended. Within a module, the module&rsquo;s name (as a string) is available as the value of the global variable __name__.  
+                </p>
+                <p>
+                 For instance, using a text editor to create a file called fibo.py in the current directory with the following contents: 
+                </p> 
+                      <div class="code-block">
+                    <p># Fibonacci numbers module<br> 
+                      <br>
+                      def fib(n):    # write Fibonacci series up to n<br>
+                       <span class="indent">a, b = 0, 1</span> <br>
+                      <span class="indent">while b &lt; n:</span> <br>
+                      <span class="indent2">print b,</span> <br>
+                      <span class="indent2">a, b = b, a+b</span> <br>
+                      <br>
+                      def fib2(n): # return Fibonacci series up to n
+                      <span class="indent">result = []</span> <br>
+                      <span class="indent">a, b = 0, 1</span> <br>
+                      <span class="indent">while b &lt; n:</span> <br>
+                      <span class="indent2">result.append(b)</span> <br>
+                      <span class="indent2">a, b = b, a+b</span> <br>
+                      <span class="indent">return result</span> <br>
+                      <br>
+                      >>> import fibo <br>
+                      <br>
+                      >>> fibo.fib(1000) <br>
+                      1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 <br>
+                      >>> fibo.fib2(100) <br>
+                      [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] <br>
+                      >>> fibo.__name__ <br>
+                      'fibo'
+                    </p>
+                     </div> 
+        </div> 
+              
+    </div> 
+    <div class="concept"> 
+        <div class="concept-title"><h3>Python Standard Library</h3></div>
+        <div class="concept-description"> 
+                <p>
+                Python&rsquo;s standard library is very extensive, offering a wide range of facilities which are listed in a table of contents accessible online. The <span class="code">library</span> contains built-in modules that provide access to system functionality such as file I/O that would otherwise be inaccessible to Python programmers, as well as modules written in Python that provide standardized solutions for many problems that occur in everyday programming. Some of these modules are explicitly designed to encourage and enhance the portability of Python programs by abstracting away platform-specifics into platform-neutral APIs.
                 </p>
                 
         </div> 
               
     </div>
     <div class="concept"> 
-        <div class="concept-title"><h3>Instantiation</h3></div>
+        <div class="concept-title"><h3>Abstract Thinking</h3></div>
         <div class="concept-description"> 
                 <p>
-                Instantiation is how you make one of these mini-modules and import it at the same time. "Instantiate" just means to create an object from the class.  The resulting created mini-module is called an object and you then assign it to a variable to work with it.  Instance variables are variables associated with the instance and are unique to each class instance.  Instance methods are function defined inside a class and is associated with an instance (ex. avatar.show_trailer()
+                Abstracting something means to give names to things, so that the name captures the core of what a function or a whole program does. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level.  The <span class="code">abstract thinker</span> can conceptualize or generalize, understanding that each concept can have multiple meanings. Such thinkers might see patterns beyond the obvious and be able to use patterns or a variety of concrete ideas or clues to solve larger problems.
                 </p>
+                <p>
+                I was able to write a Python program (Take a Break) importing from the Python Standard Library the modules <span class="code">webbrowser</span> and <span class="code">time</span> which opened a youtube video alerting me to take a break.  The details of how to open a webbrower using the function <span class="code">def open</span> and pausing program flow using the function <span class="code">def sleep</span> were hidden from us.  The hiding of detail in programming is called abstraction.  Abstraction allowed me to focus on the program that I had to write.
+                </p>  
+
                 
         </div> 
               
     </div>
-    <div class="concept"> 
-        <div class="concept-title"><h3>Class Variables</h3></div>
-        <div class="concept-description"> 
-                <p>
-                Class variables are defined at the level of the class outside of the __init__ function.  Examples of classes that have pre-defined variables include:   __name__, __doc__ and __module__.  
-                </p>
-                
-        </div> 
-              
-    </div>
-    <div class="concept"> 
-        <div class="concept-title"><h3>Inheritance</h3></div>
-        <div class="concept-description"> 
-                <p>
-                Construct of classes that include a parent and child class.  The child class inherits everything in the parent class.
-                </p>
-                
-        </div> 
-              
-    </div>
-    <div class="concept"> 
-        <div class="concept-title"><h3>Method Overriding</h3></div>
-        <div class="concept-description"> 
-                <p>
-                When a method created in a sub class overrides a method created in its parent class is called method overriding.
-                </p>
-                
-        </div> 
-              
-    </div>
+    
   </div>           
 </body>

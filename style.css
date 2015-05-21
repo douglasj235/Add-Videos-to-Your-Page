@@ -1,8 +1,8 @@
 body {
-  text-align: center; 
+  text-align: left; 
   font-family: Helvetica, Times, serif; 
   background-color: rgb(255, 255, 255); 
-  font-size: 12px;
+  font-size: 18px;
   color: rgb(99,99,99); 
   margin:40px; 
   padding:0px; 
@@ -13,22 +13,27 @@ body {
 }
 
 h1 {
+  text-align: center; 
   background-color:rgb(17, 153, 195);
   color: rgb(255,255,255); 
   margin-top: 0px; 
-  padding: 0px;
+  padding: 10px;
 }
 
 h2 {
   color: rgb(108, 109, 109);
   background-color:rgb(221,221,221); 
-  font-size: 20px; 
+  font-size: 30px; 
 }
 
 h3 {
   color: rgb(17, 153, 195);
-  font-size: 16px; 
+  font-size: 20px; 
 }
+
+.banner {
+  text-align: center;
+  }
 
 .module {
   padding:10px;
@@ -54,7 +59,7 @@ h3 {
 
 .concept{
   background-color: rgb(223,234,241); 
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .concept-description{
@@ -63,7 +68,7 @@ h3 {
 
 .stage{
   background-color: rgb(17,153,195); 
-  border-radius: 75px;
+  border-radius: 25px;
 }
 
 .code {
@@ -81,7 +86,11 @@ h3 {
 }
 
 .indent {
-  margin-left: 38px;
+  margin-left: 30px;
+}
+
+.indent2 {
+  margin-left: 54px;
 }
  
 
